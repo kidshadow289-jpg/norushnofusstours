@@ -2,9 +2,78 @@ README - No Rush No Fuss Tours (Multi-page template)
 
 What's included:
 - index.html (home)
-- tours.html (list of tours)
-- about.html (company info)
-- booking.html (booking request form)
+- tours.html (Airport pickup/dropoff, city tours, and excursions)
+- about.html ()
+- booking.html (<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Booking — No Rush No Fuss Tours</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <a class="logo" href="index.html">No Rush No Fuss Tours</a>
+    <nav class="nav" aria-label="Main">
+      <button id="nav-toggle-4" aria-expanded="false" aria-controls="nav-list-4">Menu</button>
+      <ul id="nav-list-4" class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="tours.html">Tours</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="booking.html">Booking</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <h1>Booking</h1>
+  <p>Fill out the form below to request a booking. You will receive a confirmation email after submission.</p>
+
+  <!-- Booking Form -->
+  <form id="booking-form" action="https://formspree.io/f/xyz123" method="POST">
+    <label for="b-name">Full Name</label>
+    <input id="b-name" name="name" type="text" required>
+
+    <label for="b-email">Email</label>
+    <input id="b-email" name="email" type="email" required>
+
+    <label for="b-phone">Phone</label>
+    <input id="b-phone" name="phone" type="tel">
+
+    <label for="b-date">Preferred Date</label>
+    <input id="b-date" name="date" type="date" required>
+
+    <label for="b-tour">Select Tour</label>
+    <select id="b-tour" name="tour" required>
+      <option value="">-- choose a tour --</option>
+      <option value="dunns-river">Dunn's River Falls & Beach</option>
+      <option value="blue-mountains">Blue Mountains Coffee Tour</option>
+      <option value="martha-brae">Martha Brae River Rafting</option>
+      <option value="custom">Custom / Private Tour</option>
+    </select>
+
+    <label for="b-people">Number of People</label>
+    <input id="b-people" name="people" type="number" min="1" value="2" required>
+
+    <label for="b-message">Special Requests / Message</label>
+    <textarea id="b-message" name="message" rows="4"></textarea>
+
+    <button type="submit">Request Booking</button>
+    <div id="booking-status" role="status" aria-live="polite"></div>
+  </form>
+</main>
+
+<footer class="site-footer">
+  <div class="container">&copy; <span id="year-4"></span> No Rush No Fuss Tours</div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>)
 - contact.html (contact form)
 - styles.css (shared stylesheet)
 - script.js (shared JS)
